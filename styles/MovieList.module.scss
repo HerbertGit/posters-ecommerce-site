@@ -1,0 +1,41 @@
+@import "_variables.scss";
+
+.movie__list {
+  max-width: $main_container_width;
+  margin: 0 auto;
+  padding: 0 2em;
+  width: 90%;
+
+  &__title {
+    font-size: 2.8rem;
+    margin-bottom: 0.6em;
+  }
+
+  &__container {
+    max-height: 480px;
+    // width: 100%;
+    overflow-x: auto;
+    display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // flex-direction: row;
+  }
+
+  &__container::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+@media screen and (min-width: $small_breakpoint) {
+  .movie__list {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      width: auto;
+      max-height: 750px;
+      // overflow-x: scro/ll;
+    }
+  }
+}

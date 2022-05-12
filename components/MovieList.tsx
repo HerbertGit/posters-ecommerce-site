@@ -12,9 +12,9 @@ export default function MovieList(props: props) {
       <h3 className={styles.movie__list__title}>{props.title}</h3>
       <div className={styles.movie__list__container}>
         <MovieItem title="cool poster" rating={4} />
+        <MovieItem title="poster" rating={3} />
         <MovieItem title="poster" rating={4} />
-        <MovieItem title="poster" rating={4} />
-        <MovieItem title="poster" rating={4} />
+        <MovieItem title="poster" rating={2} />
       </div>
     </div>
   );

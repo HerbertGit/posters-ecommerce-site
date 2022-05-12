@@ -9,17 +9,27 @@ type props = {
   rating: raiting;
 };
 
+function getStarIcons(rating: raiting): JSX.Element[] {
+  let stars = [];
+
+  for (let i = 0; i < rating; i++) {
+    stars.push(<i className={`bi bi-star-fill`}></i>);
+  }
+
+  while (stars.length < 5) {
+    stars.push(<i className="bi bi-star"></i>);
+  }
+
+  return stars;
+}
+
 export default function MovieItem(props: props) {
   return (
     <div className={styles.movie__item}>
       <Image src={poster} className={styles.movie__image} alt="film poster" />
       <h3>{props.title}</h3>
       <span>
-        <i className={`bi bi-star-fill`}></i>
-        <i className={`bi bi-star-fill`}></i>
-        <i className={`bi bi-star-fill`}></i>
-        <i className={`bi bi-star-fill`}></i>
-        <i className={`bi bi-star-fill`}></i>
+        {getStarIcons(props.rating)}
         <b>{`${props.rating}/5`}</b>
       </span>
     </div>

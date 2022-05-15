@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import styles from "../styles/index.module.scss";
 import MovieList from "../components/MovieList";
 import { getStarIcons } from "../utils/functions";
+import FilmVariant from "../components/FilmVariant";
 
 const Home: NextPage = () => {
   return (
@@ -37,20 +38,25 @@ const Home: NextPage = () => {
             <Image src={posterImage} layout="responsive" />
           </div>
           <div className={styles.recom__text}>
-            <span className={styles.recom__text_accent}>
+            <span className={styles.recom__text__accent}>
               Today's recomendation
             </span>
             <h2>W Malw i Puszczy</h2>
             <div className={styles.recom__text__stars}>
               <span>{getStarIcons(4)} 4/5</span>
             </div>
-            <p>
+            <p className={styles.recom__text__description}>
               This is film description, film is cool you should rent it. What
               are you wainting for. Do it.This is film description, film is cool
               you should rent it. What are you wainting for. Do it.This is film
               description, film is cool you should rent it. What are you
               wainting for.k
             </p>
+            <div className={styles.recom__text__variant_wrapper}>
+              <FilmVariant variant="4K" />
+              <FilmVariant variant="HD" />
+              <FilmVariant variant="FHD" />
+            </div>
           </div>
         </section>
       </>

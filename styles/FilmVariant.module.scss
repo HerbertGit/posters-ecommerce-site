@@ -1,0 +1,27 @@
+@import "_variables.scss";
+
+.film__variant {
+  text-align: center;
+  padding: 1.2em 1.2em;
+  background-color: $color_secondary;
+  max-width: 93px;
+
+  p,
+  b {
+    margin: 0;
+  }
+
+  &__resolution {
+    font-size: 1.5rem;
+  }
+
+  &__price {
+    font-size: 1.1rem;
+  }
+}
+
+.film__variant:hover,
+.film__variant:focus {
+  color: $color_background;
+  background-color: $color_accent;
+}

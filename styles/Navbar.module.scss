@@ -1,6 +1,6 @@
 @import "_variables.scss";
 
-$logo-size: clamp(1.5rem, 2.1vw, 2.2rem);
+$logo-size: clamp(1.9rem, 2.1vw, 2.2rem);
 $text-size: clamp(1.25rem, 1.9vw, 1.7rem);
 
 .navbar {
@@ -16,15 +16,52 @@ $text-size: clamp(1.25rem, 1.9vw, 1.7rem);
   color: $color_secondary;
   font-size: $logo-size;
   grid-column: 12/13;
+  transition: all 0.5s;
+
   // height: 1.2rem;
+  // z-index: ;
+  &__content {
+    width: 60%;
+    height: 100vh;
+
+    background-color: #664a39;
+
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: all 0.5s;
+  }
+}
+
+.hamburger_open {
+  @extend .hamburger;
+  transition: all 0.5s;
+
+  // font-size: 4rem;
+
+  transform: translate(-60vw);
+}
+
+.hamburger__content_open {
+  @extend .hamburger__content;
+  transition: all 0.5s;
+  transform: translate(0);
+}
+
+.hamburger:hover,
+.hamburger:focus {
+  color: $color_accent;
 }
 
 .logo {
   grid-column: 1 / span 9;
   align-self: center;
   font-size: $logo-size;
+  transition: all 0.5s;
 
-  h2 {
+  &__text {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-size: $text-size;
@@ -33,6 +70,14 @@ $text-size: clamp(1.25rem, 1.9vw, 1.7rem);
     color: white;
     display: inline;
     font-weight: 400;
+    transition: all 0.5s;
+
+    &_open {
+      @extend .logo__text;
+      transition: all 0.5s;
+      transform: translateX(-20px);
+      opacity: 0;
+    }
   }
 }
 
@@ -61,6 +106,9 @@ $text-size: clamp(1.25rem, 1.9vw, 1.7rem);
   }
 
   .hamburger {
+    display: none;
+  }
+  .hamburger__content {
     display: none;
   }
 }

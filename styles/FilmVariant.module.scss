@@ -2,8 +2,9 @@
 
 .film__variant {
   text-align: center;
-  padding: 1.2em 1.2em;
-  background-color: $color_secondary;
+  padding: 1.2em 1.4em;
+  background-color: $font-color;
+  color: $color_background;
   max-width: 93px;
 
   p,
@@ -22,6 +23,7 @@
 
 .film__variant:hover,
 .film__variant:focus {
+  cursor: pointer;
   color: $color_background;
   background-color: $color_accent;
 }

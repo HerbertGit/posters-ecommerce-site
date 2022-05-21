@@ -1,6 +1,6 @@
 import styles from "../styles/FilmVariant.module.scss";
 
-type resolution = "HD" | "FHD" | "4K";
+type resolution = "S" | "M" | "L";
 
 type props = {
   variant: resolution;
@@ -10,15 +10,15 @@ export default function FilmVariant(props: props) {
   let price: number;
 
   switch (props.variant) {
-    case "4K":
+    case "S":
       price = 7;
       break;
 
-    case "FHD":
+    case "M":
       price = 5;
       break;
 
-    case "HD":
+    case "L":
       price = 4;
       break;
   }

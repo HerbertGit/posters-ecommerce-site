@@ -1,10 +1,12 @@
 @import "./variables";
 
 .hero {
-  max-width: 1500px;
-  margin: 7rem auto;
+  max-width: 1800px;
+  margin: 3rem 0 7rem auto;
+  // margin-right: 0;
   width: 90%;
   padding: 0 2em;
+  padding-right: 0;
 
   display: flex;
   justify-content: center;
@@ -15,7 +17,7 @@
 .hero__text {
   text-align: center;
 
-  font-size: clamp(1.2rem, 1.8vw, 2rem);
+  font-size: clamp(1.2rem, 1.8vw, 2.2rem);
 
   p {
     font-size: clamp(1rem, 1.2vw, 1.5rem);
@@ -33,7 +35,7 @@
 }
 
 .hero__img_container {
-  max-width: 70%;
+  max-width: 50%;
   margin-top: 2em;
 }
 
@@ -66,6 +68,7 @@
   .recom__img {
     width: clamp(250px, 40%, 450px);
     margin-bottom: 4em;
+    border: 3px solid black;
   }
 
   .recom__text {

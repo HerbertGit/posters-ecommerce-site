@@ -1,0 +1,8 @@
+@import "./variables";
+.footer {
+  width: 100%;
+  text-align: center;
+  background-color: $color_secondary;
+  color: $color_background;
+  padding: 0.5em 0;
+}

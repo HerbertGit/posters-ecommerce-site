@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import heroImage from "../public/renting_company_hero_img.png";
-import posterImage from "../public/test_poster.png";
+import heroImage from "../public/Poster_Hero_img.jpg";
+import posterImage from "../public/hero_poster.jpg";
 import Layout from "../components/Layout";
 import styles from "../styles/index.module.scss";
 import MovieList from "../components/MovieList";
@@ -11,8 +11,8 @@ import FilmVariant from "../components/FilmVariant";
 const Home: NextPage = () => {
   return (
     <Layout>
-      <>
-        <div className={styles.hero}>
+      <main>
+        <section className={styles.hero}>
           <div className={styles.hero__text}>
             <h1>Still wasting money on subscriptions ?</h1>
             <p>Rent films that you actually will watch. </p>
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
               alt="Person sitting on couch watching film"
             />
           </div>
-        </div>
+        </section>
 
         <section className="recentlyAdded">
           <MovieList title="Recently Added" />
@@ -53,13 +53,25 @@ const Home: NextPage = () => {
               wainting for.k
             </p>
             <div className={styles.recom__text__variant_wrapper}>
-              <FilmVariant variant="4K" />
-              <FilmVariant variant="HD" />
-              <FilmVariant variant="FHD" />
+              <FilmVariant variant="S" />
+              <FilmVariant variant="M" />
+              <FilmVariant variant="L" />
             </div>
           </div>
         </section>
-      </>
+
+        <section className="recentlyAdded">
+          <MovieList title="Recently Added" />
+        </section>
+
+        <section className="recentlyAdded">
+          <MovieList title="Recently Added" />
+        </section>
+
+        <section className="recentlyAdded">
+          <MovieList title="Recently Added" />
+        </section>
+      </main>
     </Layout>
   );
 };

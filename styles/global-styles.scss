@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins:wght@300;400;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap");
 @import "_variables.scss";
 
 * {
@@ -7,8 +8,8 @@
 
 body {
   background-color: $color_background;
-  font-family: "Poppins", sans-serif;
-  color: white;
+  font-family: "Chivo", sans-serif;
+  color: $font-color;
   margin: 0;
   padding: 0;
 }
@@ -16,7 +17,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Playfair Display", serif;
   margin: 0;
   padding: 0;
 }
@@ -27,4 +28,13 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
+}
+
+.layout {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  &__logo {
+    padding: 0.4em 0;
+  }
 }

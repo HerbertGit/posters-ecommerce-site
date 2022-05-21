@@ -34,7 +34,13 @@ h3 {
   width: 100%;
   text-align: center;
   border-bottom: 1px solid black;
+  height: 7vh;
   &__logo {
     padding: 0.4em 0;
+    font-size: 2rem;
   }
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
